@@ -38,7 +38,7 @@ return [
         [
             'title' => 'Web Development',
             'icon' => 'code',
-            'color' => 'purple',
+            'color' => 'cyan',
             'skills' => ['Next.js', 'React.js', 'Laravel', 'WordPress', 'WooCommerce', 'Elementor', 'HTML5', 'CSS3', 'Tailwind CSS'],
         ],
         [
@@ -50,7 +50,7 @@ return [
         [
             'title' => 'Databases & Backend',
             'icon' => 'database',
-            'color' => 'violet',
+            'color' => 'teal',
             'skills' => ['MySQL', 'Firebase', 'Payload CMS', 'API development & integration'],
         ],
         [
@@ -86,6 +86,25 @@ return [
             'tech' => ['Android Studio', 'Java', 'Firebase', 'Git'],
             'gradient' => 'from-blue-500 to-cyan-500',
             'icon' => 'boxes',
+            'url' => null,
+            'url_label' => 'View Project',
+            'images' => [
+                [
+                    'src' => 'images/projects/university-lms/login.svg',
+                    'alt' => 'LMS app login screen',
+                    'caption' => 'Secure login with Firebase authentication',
+                ],
+                [
+                    'src' => 'images/projects/university-lms/dashboard.svg',
+                    'alt' => 'LMS student dashboard',
+                    'caption' => 'Course dashboard with enrolled modules',
+                ],
+                [
+                    'src' => 'images/projects/university-lms/feedback.svg',
+                    'alt' => 'LMS feedback screen',
+                    'caption' => 'Student feedback submission and lecturer responses',
+                ],
+            ],
         ],
         [
             'title' => 'Greenhouse Automation App',
@@ -93,8 +112,22 @@ return [
             'description' => 'Developed a mobile app using Android Studio for full greenhouse automation. Integrated Firebase for data storage and API communication with a machine learning model. Enabled control of IoT devices for real-time environmental management.',
             'problem' => 'Mobile app & IoT integration',
             'tech' => ['Android Studio', 'Java', 'Firebase', 'Machine Learning', 'IoT'],
-            'gradient' => 'from-cyan-500 to-blue-500',
+            'gradient' => 'from-blue-500 to-cyan-500',
             'icon' => 'zap',
+            'url' => null,
+            'url_label' => 'View Project',
+            'images' => [
+                [
+                    'src' => 'images/projects/greenhouse-automation/dashboard.svg',
+                    'alt' => 'Greenhouse control dashboard',
+                    'caption' => 'Real-time temperature and humidity monitoring',
+                ],
+                [
+                    'src' => 'images/projects/greenhouse-automation/sensors.svg',
+                    'alt' => 'Greenhouse sensor monitoring',
+                    'caption' => 'IoT sensor data synced through Firebase',
+                ],
+            ],
         ],
         [
             'title' => 'Android Application For Sprinkles Bakery',
@@ -102,7 +135,7 @@ return [
             'description' => 'Android application created using Android Studio, Java, and Firebase for bakery management and operations.',
             'problem' => 'Mobile app development',
             'tech' => ['Android Studio', 'Java', 'Firebase', 'Git'],
-            'gradient' => 'from-purple-500 to-pink-500',
+            'gradient' => 'from-sky-500 to-cyan-500',
             'icon' => 'boxes',
         ],
         [
@@ -111,7 +144,7 @@ return [
             'description' => 'Android application created using Android Studio, Java, and a local MySQL database for managing milk shop operations.',
             'problem' => 'Mobile app & database development',
             'tech' => ['Android Studio', 'Java', 'MySQL', 'Local Database'],
-            'gradient' => 'from-violet-500 to-purple-500',
+            'gradient' => 'from-teal-500 to-sky-500',
             'icon' => 'database',
         ],
         [
@@ -129,7 +162,7 @@ return [
             'description' => 'Automatically find all the faces in an image. Recognize and manipulate faces from Python and mark attendance using face recognition technology.',
             'problem' => 'Machine learning & computer vision',
             'tech' => ['Python', 'Machine Learning', 'Computer Vision', 'OpenCV'],
-            'gradient' => 'from-cyan-500 to-blue-500',
+            'gradient' => 'from-blue-500 to-cyan-500',
             'icon' => 'brain',
         ],
         [
@@ -138,7 +171,7 @@ return [
             'description' => 'Using a machine learning algorithm to solve complex classification, regression, and outlier detection problems with Support Vector Machine implementation.',
             'problem' => 'Machine learning algorithm development',
             'tech' => ['Python', 'Machine Learning', 'SVM', 'Scikit-learn'],
-            'gradient' => 'from-purple-500 to-pink-500',
+            'gradient' => 'from-sky-500 to-cyan-500',
             'icon' => 'brain',
         ],
         [
@@ -156,7 +189,7 @@ return [
             'description' => 'Modular WordPress plugin that refactors legacy business logic into clean, reusable components with better performance and security.',
             'problem' => 'Backend & plugin engineering',
             'tech' => ['WordPress', 'PHP', 'Git', 'WordPress Toolkit'],
-            'gradient' => 'from-violet-500 to-purple-500',
+            'gradient' => 'from-teal-500 to-sky-500',
             'icon' => 'wrench',
         ],
         [
@@ -165,7 +198,7 @@ return [
             'description' => 'Tailored e-commerce experience with custom plugins, checkout customization, and UI improvements for higher conversion and trust.',
             'problem' => 'Storefront & plugin customization',
             'tech' => ['WordPress', 'WooCommerce', 'Elementor', 'TypeScript'],
-            'gradient' => 'from-purple-500 to-pink-500',
+            'gradient' => 'from-sky-500 to-cyan-500',
             'icon' => 'boxes',
         ],
         [
@@ -174,7 +207,7 @@ return [
             'description' => 'Enhancements for a production WordPress site, including delivery service integration, theme translation, and admin panel extensions.',
             'problem' => 'Feature implementation & maintenance',
             'tech' => ['WordPress', 'PHP', 'GoLivro integration', 'Custom admin plugins'],
-            'gradient' => 'from-cyan-500 to-blue-500',
+            'gradient' => 'from-blue-500 to-cyan-500',
             'icon' => 'code',
         ],
     ],

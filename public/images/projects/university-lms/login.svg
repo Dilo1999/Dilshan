@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="24" fill="#0c1f33"/>
+  <rect x="280" y="40" width="240" height="420" rx="28" fill="#143552" stroke="#38bdf8" stroke-width="3"/>
+  <rect x="300" y="70" width="200" height="360" rx="16" fill="#1a4466"/>
+  <text x="400" y="130" text-anchor="middle" fill="#7dd3fc" font-family="Arial,sans-serif" font-size="18" font-weight="700">LMS Login</text>
+  <rect x="330" y="160" width="140" height="28" rx="8" fill="#0c1f33" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="330" y="210" width="140" height="28" rx="8" fill="#0c1f33" stroke="#22d3ee" stroke-width="1"/>
+  <rect x="330" y="270" width="140" height="36" rx="10" fill="#0284c7"/>
+  <text x="400" y="293" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="14">Sign In</text>
+</svg>

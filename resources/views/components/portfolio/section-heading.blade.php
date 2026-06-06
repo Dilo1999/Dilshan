@@ -9,6 +9,6 @@
     </h2>
     <div class="section-divider"></div>
     @if ($subtitle)
-        <p class="mx-auto mt-6 max-w-2xl text-gray-400">{{ $subtitle }}</p>
+        <p class="mx-auto mt-6 max-w-2xl text-zinc-500">{{ $subtitle }}</p>
     @endif
 </div>

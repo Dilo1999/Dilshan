@@ -43,7 +43,30 @@ class PortfolioProjects
             ],
         ];
 
+        $project['url'] = $project['url'] ?? null;
+        $project['url_label'] = $project['url_label'] ?? 'Visit Project';
+        $project['images'] = array_values(array_map([self::class, 'normalizeImage'], $project['images'] ?? []));
+
         return $project;
+    }
+
+    private static function normalizeImage(array|string $image): array
+    {
+        if (is_string($image)) {
+            return [
+                'src' => asset($image),
+                'alt' => '',
+                'caption' => '',
+            ];
+        }
+
+        $path = $image['src'] ?? $image['path'] ?? '';
+
+        return [
+            'src' => str_starts_with($path, 'http') ? $path : asset($path),
+            'alt' => $image['alt'] ?? '',
+            'caption' => $image['caption'] ?? '',
+        ];
     }
 
     private static function inferFeatures(array $project): array

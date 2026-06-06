@@ -5,39 +5,80 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-/* Portfolio theme */
+/* ── Clean light theme (#ffffff + #f4f4f3) ── */
 @theme {
-  --color-portfolio-bg: #0a0e1a;
-  --color-portfolio-surface: rgba(255, 255, 255, 0.05);
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --color-portfolio-bg: #ffffff;
+  --color-portfolio-bg-soft: #f4f4f3;
+  --color-portfolio-elevated: #ffffff;
+  --color-portfolio-border: #e8e8e6;
+  --color-portfolio-muted: #71717a;
+  --color-portfolio-text: #27272a;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", "Inter", ui-sans-serif, sans-serif;
 }
 
-/* Portfolio utilities */
 @utility text-gradient-primary {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-blue-400 to-purple-400;
+  @apply text-zinc-900;
 }
 
 @utility text-gradient-hero {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-white via-blue-100 to-purple-200;
+  @apply text-zinc-900;
 }
 
 @utility text-gradient-accent {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400;
+  @apply text-zinc-800;
 }
 
 @utility glass-panel {
-  @apply rounded-2xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 backdrop-blur-xl;
+  @apply rounded-2xl border border-portfolio-border bg-portfolio-bg shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+}
+
+@utility inner-panel {
+  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft;
 }
 
 @utility section-divider {
-  @apply mx-auto h-1 w-24 rounded-full bg-linear-to-r from-blue-500 to-purple-600;
+  @apply mx-auto h-px w-24 rounded-full bg-portfolio-border;
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-zinc-900 px-6 py-3.5 font-medium text-white transition-all duration-300 hover:bg-zinc-800;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-portfolio-border bg-portfolio-bg px-6 py-3.5 font-medium text-zinc-700 transition-all duration-300 hover:bg-portfolio-bg-soft;
+}
+
+@utility tag-pill {
+  @apply rounded-full border border-portfolio-border bg-portfolio-bg-soft px-4 py-2 text-sm text-zinc-600;
+}
+
+@utility tech-tag {
+  @apply rounded-lg border border-portfolio-border bg-portfolio-bg-soft px-3 py-1.5 text-sm text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-800;
+}
+
+@utility icon-box {
+  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft p-3 text-zinc-700 shadow-sm;
 }
 
 @utility portfolio-grid-bg {
   background-image:
-    linear-gradient(rgba(96, 165, 250, 0.1) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(96, 165, 250, 0.1) 1px, transparent 1px);
-  background-size: 50px 50px;
+    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+@utility portfolio-mesh {
+  background-color: #ffffff;
+  background-image: linear-gradient(180deg, #ffffff 0%, #f4f4f3 100%);
+}
+
+@utility portfolio-section-alt {
+  background-color: #f4f4f3;
+}
+
+@utility portfolio-section {
+  background-color: #ffffff;
 }
 
 @keyframes floatOrb {
@@ -50,6 +91,11 @@
   50% { transform: translateY(8px) rotate(-6deg); }
 }
 
+@keyframes auroraShift {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.05); }
+}
+
 .animate-float-orb {
   animation: floatOrb 6s ease-in-out infinite;
 }
@@ -58,16 +104,14 @@
   animation: floatOrbReverse 6s ease-in-out infinite;
 }
 
-/* Scroll & load animations (Framer Motion–style) */
+.animate-aurora {
+  animation: auroraShift 8s ease-in-out infinite;
+}
+
+/* Scroll & load animations */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeIn {
@@ -76,72 +120,45 @@
 }
 
 @keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/* Base typography (match React src/styles/theme.css) */
 :root {
   --font-size: 16px;
 }
+
 html {
   font-size: var(--font-size);
   scroll-behavior: smooth;
 }
+
 @layer base {
-  h1 { @apply text-2xl font-medium leading-[1.5]; }
-  h2 { @apply text-xl font-medium leading-[1.5]; }
-  h3 { @apply text-lg font-medium leading-[1.5]; }
+  h1, h2, h3 { font-family: var(--font-display); }
+  h1 { @apply text-2xl font-semibold leading-[1.5]; }
+  h2 { @apply text-xl font-semibold leading-[1.5]; }
+  h3 { @apply text-lg font-semibold leading-[1.5]; }
   h4 { @apply text-base font-medium leading-[1.5]; }
   label { @apply text-base font-medium leading-[1.5]; }
   button { @apply text-base font-medium leading-[1.5]; }
   input { @apply text-base font-normal leading-[1.5]; }
 }
 
-/* Initial state: hidden until in-view or .animate-now */
-.animate-on-scroll {
-  opacity: 0;
-}
-.animate-on-scroll.in-view {
-  opacity: 1;
-}
+.animate-on-scroll { opacity: 0; }
+.animate-on-scroll.in-view { opacity: 1; }
+.animate-now { opacity: 0; }
+.animate-now.played { opacity: 1; }
 
-.animate-now {
-  opacity: 0;
-}
-.animate-now.played {
-  opacity: 1;
-}
-
-/* Animation runners (triggered by .in-view or .played) */
 .animate-on-scroll[data-animate="fadeInUp"],
 .animate-now[data-animate="fadeInUp"] {
   transform: translateY(30px);
@@ -192,10 +209,10 @@ html {
   animation-delay: calc(var(--delay, 0) * 1s);
 }
 
-/* Laravel welcome page dot backgrounds */
 @utility bg-dots-darker {
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
 }
+
 @utility bg-dots-lighter {
-    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
 }

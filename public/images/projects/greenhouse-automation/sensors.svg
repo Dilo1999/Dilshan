@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" fill="none">
+  <rect width="800" height="500" rx="24" fill="#0c1f33"/>
+  <rect x="280" y="40" width="240" height="420" rx="28" fill="#143552" stroke="#2dd4bf" stroke-width="3"/>
+  <rect x="300" y="70" width="200" height="360" rx="16" fill="#1a4466"/>
+  <text x="400" y="110" text-anchor="middle" fill="#5eead4" font-family="Arial,sans-serif" font-size="16" font-weight="700">Sensor Monitoring</text>
+  <rect x="315" y="140" width="170" height="55" rx="10" fill="#0c1f33" stroke="#14b8a6" stroke-width="1"/>
+  <rect x="315" y="210" width="170" height="55" rx="10" fill="#0c1f33" stroke="#14b8a6" stroke-width="1"/>
+  <rect x="315" y="280" width="170" height="55" rx="10" fill="#0c1f33" stroke="#14b8a6" stroke-width="1"/>
+  <rect x="315" y="350" width="170" height="40" rx="10" fill="#0d9488"/>
+</svg>
