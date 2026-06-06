@@ -1,0 +1,60 @@
+@php($about = config('portfolio.about'))
+
+<section id="about" class="relative py-32">
+    <div class="mx-auto max-w-7xl px-6">
+        <x-portfolio.section-heading title="System Profile" />
+
+        <div class="grid items-center gap-8 md:grid-cols-2">
+            <div class="space-y-6">
+                <div class="glass-panel group p-8 transition-all duration-300 hover:border-blue-500/50">
+                    <div class="flex items-start gap-4">
+                        <div class="rounded-xl border border-blue-500/20 bg-blue-500/10 p-3 transition-colors group-hover:bg-blue-500/20">
+                            <x-portfolio.icon name="target" class="h-6 w-6 text-blue-400" />
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="mb-3 text-2xl font-semibold">Developer Identity</h3>
+                            <p class="leading-relaxed text-gray-300">{{ $about['bio'] }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-panel group p-6 transition-all duration-300 hover:border-purple-500/50">
+                        <x-portfolio.icon name="calendar" class="mb-3 h-5 w-5 text-purple-400 transition-transform group-hover:scale-110" />
+                        <div class="mb-1 text-sm text-gray-400">Experience</div>
+                        <div class="font-semibold">{{ $about['experience'] }}</div>
+                    </div>
+                    <div class="glass-panel group p-6 transition-all duration-300 hover:border-purple-500/50">
+                        <x-portfolio.icon name="map-pin" class="mb-3 h-5 w-5 text-purple-400 transition-transform group-hover:scale-110" />
+                        <div class="mb-1 text-sm text-gray-400">Location</div>
+                        <div class="font-semibold">{{ $about['location'] }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="rounded-2xl border border-white/10 bg-linear-to-br from-blue-500/10 to-purple-500/10 p-8 backdrop-blur-xl transition-all duration-300 hover:border-cyan-500/50">
+                    <div class="mb-6 flex items-center gap-3">
+                        <x-portfolio.icon name="zap" class="h-6 w-6 text-cyan-400" />
+                        <h3 class="text-xl font-semibold">Focus Areas</h3>
+                    </div>
+                    <div class="space-y-3">
+                        @foreach ($about['focus_areas'] as $focus)
+                            <div class="flex items-start gap-3 rounded-lg border border-white/5 bg-white/5 p-3 transition-colors hover:border-cyan-500/30">
+                                <div class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></div>
+                                <span class="text-gray-300">{{ $focus }}</span>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="glass-panel p-6">
+                    <div class="mb-2 text-sm text-gray-400">Current Interest</div>
+                    <div class="text-lg font-semibold text-gradient-accent">
+                        {{ $about['current_interest'] }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
