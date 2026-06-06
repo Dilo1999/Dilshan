@@ -5,17 +5,17 @@ return [
     'initials' => 'DS',
     'headline' => ['Building Clean, Reliable', 'Digital Solutions'],
     'tagline' => 'Detail-oriented and enthusiastic developer focused on building clean, reliable solutions with modern web technologies like Next.js, Laravel, WordPress, and React Native.',
-    'status' => 'Junior Software Developer',
-    'hero_badge' => 'Junior Software Developer',
+    'status' => 'Full Stack Developer',
+    'hero_badge' => 'Full Stack Developer',
     'roles' => [
-        'Junior Software Developer',
+        'Full Stack Developer',
         'Next.js',
         'Laravel',
         'WordPress',
         'React Native',
     ],
     'about' => [
-        'bio' => 'A detail-oriented and enthusiastic Junior Software Developer based in Colombo, Sri Lanka, combining clean engineering practices with a love for teaching to build impactful digital experiences. Currently working at M Data Zone SA Pvt Ltd, building full-stack solutions with Next.js, Payload CMS, Laravel, PHP, and MySQL. Previously contributed as a Software Engineering Intern at the Sri Lanka Export Development Board, delivering Laravel-based platforms and a React Native CRM app used by real teams. Holds a BICT (Hons) degree in Software Technology from the University of Sri Jayewardenepura.',
+        'bio' => 'A detail-oriented and enthusiastic Full Stack Developer based in Colombo, Sri Lanka, combining clean engineering practices with a love for teaching to build impactful digital experiences. Currently working at Litus Group, building full-stack solutions with modern web technologies. Previously worked as a Junior Software Developer at M Data Zone SA Pvt Ltd, delivering Next.js, Payload CMS, WordPress, and e-commerce platforms. Earlier contributed as a Software Engineering Intern at the Sri Lanka Export Development Board, delivering Laravel-based platforms and a React Native CRM app used by real teams. Holds a BICT (Hons) degree in Software Technology from the University of Sri Jayewardenepura.',
         'experience' => '2+ years',
         'location' => 'Colombo, Sri Lanka',
         'focus_areas' => [
@@ -181,9 +181,20 @@ return [
     'experience_subtitle' => 'From early internships to production-ready platforms, I have helped design, build, and ship real-world software that solves meaningful problems for teams and businesses.',
     'experience' => [
         [
+            'role' => 'Software Engineering Intern',
+            'company' => 'Sri Lanka Export Development Board',
+            'period' => 'Previous',
+            'icon' => 'code',
+            'achievements' => [
+                'Website Enhancements (Laravel)  : Implemented new features across backend and frontend and refined account management flows.',
+                'Mobile App Development (React Native)  : Developed a React Native mobile application bringing the CRM web experience to mobile devices.',
+                'Website Development (Laravel) : Designed and developed a Laravel-based website with secure user management and role-based access control.',
+            ],
+        ],
+        [
             'role' => 'Junior Software Developer',
             'company' => 'M Data Zone SA Pvt Ltd',
-            'period' => 'Current',
+            'period' => 'Previous',
             'icon' => 'briefcase',
             'achievements' => [
                 'Business Website Development (Next.js + Payload CMS): Delivered a fully responsive business website, integrated Payload CMS with custom API endpoints, and implemented JWT authentication with refresh tokens, OTP flows, and API tokens.',
@@ -192,14 +203,12 @@ return [
             ],
         ],
         [
-            'role' => 'Software Engineering Intern',
-            'company' => 'Sri Lanka Export Development Board',
-            'period' => 'Previous',
-            'icon' => 'code',
+            'role' => 'Full Stack Developer',
+            'company' => 'Litus Group',
+            'period' => 'Current',
+            'icon' => 'briefcase',
             'achievements' => [
-                'Website Enhancements (Laravel — actionplan.edb.gov.lk): Implemented new features across backend and frontend and refined account management flows.',
-                'Mobile App Development (React Native — crm.edb.gov.lk): Developed a React Native mobile application bringing the CRM web experience to mobile devices.',
-                'Website Development (Laravel — wed.edb.gov.lk): Designed and developed a Laravel-based website with secure user management and role-based access control.',
+                'Building full-stack solutions and delivering production-ready software for Litus Group.',
             ],
         ],
     ],
