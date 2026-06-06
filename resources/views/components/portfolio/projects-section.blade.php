@@ -1,6 +1,6 @@
 @php($projects = \App\Support\PortfolioProjects::all())
 
-<section id="projects" class="relative py-32 portfolio-section-alt">
+<section id="projects" class="relative py-28 portfolio-section-alt">
     <div class="mx-auto max-w-7xl px-6">
         <x-portfolio.section-heading
             title="Featured Projects"
@@ -10,7 +10,7 @@
         <div class="grid gap-6 md:grid-cols-2">
             @foreach ($projects as $project)
                 <article
-                    class="group animate-on-scroll glass-panel p-8 hover:-translate-y-2"
+                    class="group animate-on-scroll surface-card p-8"
                     data-animate="fadeInUp"
                     data-delay="{{ $loop->index * 0.1 }}"
                 >
@@ -23,7 +23,7 @@
                         </div>
 
                         <div>
-                            <h3 class="mb-3 text-2xl font-bold text-zinc-900">
+                            <h3 class="mb-3 text-xl font-bold text-zinc-900 md:text-2xl">
                                 {{ $project['title'] }}
                             </h3>
                             <p class="mb-4 leading-relaxed text-zinc-600">{{ $project['description'] }}</p>

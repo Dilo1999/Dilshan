@@ -1,22 +1,17 @@
 @php($about = config('portfolio.about'))
 
-<section id="about" class="relative py-32 portfolio-section">
+<section id="about" class="relative py-28 portfolio-section">
     <div class="mx-auto max-w-7xl px-6">
-        <x-portfolio.section-heading title="System Profile" />
+        <x-portfolio.section-heading title="Developer Profile" />
 
         <div class="grid items-center gap-8 md:grid-cols-2">
             <div class="space-y-6">
-                <div class="glass-panel group p-8">
-                    <div class="flex items-start gap-4">
-                        <div class="icon-box p-3">
-                            <x-portfolio.icon name="target" class="h-6 w-6 text-zinc-600" />
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="mb-3 text-2xl font-semibold text-zinc-900">Developer Identity</h3>
-                            <p class="leading-relaxed text-zinc-600">{{ $about['bio'] }}</p>
-                        </div>
-                    </div>
-                </div>
+                <x-portfolio.identity-flip-card
+                    :bio="$about['bio']"
+                    :profile-image="$about['profile_image']"
+                    :profile-image-alt="$about['profile_image_alt']"
+                    :name="config('portfolio.name')"
+                />
 
                 <div class="grid grid-cols-2 gap-4">
                     <div class="glass-panel group p-6">

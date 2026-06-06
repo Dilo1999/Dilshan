@@ -1,11 +1,11 @@
 @php($research = config('portfolio.research'))
 
-<section id="research" class="relative py-32 portfolio-section-alt">
+<section id="research" class="relative py-28 portfolio-section-alt">
     <div class="mx-auto max-w-7xl px-6">
         <x-portfolio.section-heading title="Engineering Beyond the Interface" />
 
         <div class="grid gap-8 md:grid-cols-2">
-            <div class="animate-on-scroll glass-panel p-8" data-animate="slideLeft">
+            <div class="animate-on-scroll surface-card p-8" data-animate="slideLeft">
                 <div class="mb-6 flex items-center gap-3">
                     <div class="icon-box p-3">
                         <x-portfolio.icon name="brain" class="h-6 w-6 text-zinc-600" />
@@ -29,7 +29,7 @@
             </div>
 
             <div class="space-y-6">
-                <div class="animate-on-scroll glass-panel p-6" data-animate="slideRight">
+                <div class="animate-on-scroll surface-card p-6" data-animate="slideRight">
                     <div class="mb-4 flex items-center gap-3">
                         <x-portfolio.icon name="cpu" class="h-5 w-5 text-zinc-600" />
                         <h4 class="font-semibold text-zinc-900">ML Pipeline Architecture</h4>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div class="animate-on-scroll glass-panel p-6" data-animate="fadeInUp" data-delay="0.2">
+                <div class="animate-on-scroll surface-card p-6" data-animate="fadeInUp" data-delay="0.2">
                     <div class="grid grid-cols-3 gap-4 text-center">
                         @foreach ($research['stats'] as $stat)
                             <div>

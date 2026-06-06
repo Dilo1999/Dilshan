@@ -17,25 +17,14 @@
     }
 @endphp
 
-<section id="contact" class="relative py-32 portfolio-section-alt">
+<section id="contact" class="relative py-28 portfolio-section-alt">
     <div class="mx-auto max-w-7xl px-6">
-        <x-portfolio.section-heading :title="$contact['heading'] ?? 'Communication Console'" />
+        <x-portfolio.section-heading :title="$contact['heading'] ?? 'Get in Touch'" />
 
         <div class="mx-auto max-w-4xl">
-            <div class="glass-panel mb-8 p-8 md:p-12">
-                <div class="mb-6 flex items-center gap-3 border-b border-portfolio-border pb-6">
-                    <x-portfolio.icon name="terminal" class="h-6 w-6 text-zinc-600" />
-                    <div class="flex-1 font-mono text-sm text-zinc-500">
-                        <span class="text-zinc-700">dilshan@portfolio</span>
-                        <span class="text-zinc-500">:</span>
-                        <span class="text-zinc-600">~</span>
-                        <span class="text-zinc-500">$ </span>
-                        <span class="text-zinc-800">initiate_contact</span>
-                    </div>
-                </div>
-
+            <div class="surface-card mb-8 p-8 md:p-10">
                 <div class="mb-8">
-                    <p class="mb-4 text-2xl text-zinc-800 md:text-3xl">
+                    <p class="mb-3 text-2xl font-semibold text-zinc-900 md:text-3xl">
                         {{ $contact['intro'] }}
                     </p>
                     <p class="text-zinc-500">
@@ -43,7 +32,7 @@
                     </p>
                 </div>
 
-                <div class="mb-8 grid gap-6 md:grid-cols-2">
+                <div class="mb-8 grid gap-4 md:grid-cols-2">
                     @foreach ($links as $link)
                         @if ($link['href'])
                             <a
@@ -52,7 +41,7 @@
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 @endif
-                                class="group inner-panel block p-6 transition-all duration-300 hover:border-zinc-300"
+                                class="group inner-panel block p-5 transition-all duration-300 hover:border-zinc-300"
                             >
                                 <div class="flex items-start gap-4">
                                     <div class="icon-box p-3 transition-transform group-hover:scale-105">
@@ -65,7 +54,7 @@
                                 </div>
                             </a>
                         @else
-                            <div class="group inner-panel p-6">
+                            <div class="inner-panel p-5">
                                 <div class="flex items-start gap-4">
                                     <div class="icon-box p-3">
                                         <x-portfolio.icon :name="$link['icon']" class="h-5 w-5 text-zinc-600" />
@@ -82,11 +71,11 @@
 
                 <a href="mailto:{{ $contact['email'] }}" class="btn-primary group w-full">
                     <x-portfolio.icon name="send" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    <span class="font-semibold">Start a Conversation</span>
+                    <span class="font-semibold">Send Message</span>
                 </a>
             </div>
 
-            <p class="text-center text-sm text-zinc-600">
+            <p class="text-center text-sm text-zinc-500">
                 © {{ date('Y') }} {{ config('portfolio.name') }}. Built with Laravel & Tailwind CSS.
             </p>
         </div>

@@ -21,6 +21,8 @@ return [
     ],
     'about' => [
         'bio' => 'A detail-oriented and enthusiastic Full Stack Developer based in Colombo, Sri Lanka, combining clean engineering practices with a love for teaching to build impactful digital experiences. Currently working at Litus Group, building full-stack solutions with modern web technologies. Previously worked as a Junior Software Developer at M Data Zone SA Pvt Ltd, delivering Next.js, Payload CMS, WordPress, and e-commerce platforms. Earlier contributed as a Software Engineering Intern at the Sri Lanka Export Development Board, delivering Laravel-based platforms and a React Native CRM app used by real teams. Holds a BICT (Hons) degree in Software Technology from the University of Sri Jayewardenepura.',
+        'profile_image' => 'images/hero/1738848960451.jpg',
+        'profile_image_alt' => 'Dilshan Senanayaka',
         'experience' => '2+ years',
         'location' => 'Colombo, Sri Lanka',
         'focus_areas' => [
@@ -235,9 +237,9 @@ return [
             'period' => 'Previous',
             'icon' => 'briefcase',
             'achievements' => [
-                'Business Website Development (Next.js + Payload CMS): Delivered a fully responsive business website, integrated Payload CMS with custom API endpoints, and implemented JWT authentication with refresh tokens, OTP flows, and API tokens.',
-                'Custom WordPress Backend Logic (PHP Plugin Development): Rebuilt complex legacy logic as a dedicated WordPress plugin, modularized business rules, and improved performance and security.',
-                'E-commerce Website Development (WordPress + WooCommerce + Elementor): Built a tailored e-commerce experience with custom TypeScript and PHP plugins, improving product management, checkout flow, and UI details.',
+                'Business Website Development (Next.js + Payload CMS) : Delivered a fully responsive business website, integrated Payload CMS with custom API endpoints, and implemented JWT authentication with refresh tokens, OTP flows, and API tokens.',
+                'Custom WordPress Backend Logic (PHP Plugin Development) : Rebuilt complex legacy logic as a dedicated WordPress plugin, modularized business rules, and improved performance and security.',
+                'E-commerce Website Development (WordPress + WooCommerce + Elementor) : Built a tailored e-commerce experience with custom TypeScript and PHP plugins, improving product management, checkout flow, and UI details.',
             ],
         ],
         [

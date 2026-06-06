@@ -1,6 +1,6 @@
 @php($educations = config('portfolio.education'))
 
-<section id="education" class="relative py-32 portfolio-section">
+<section id="education" class="relative py-28 portfolio-section">
     <div class="mx-auto max-w-7xl px-6">
         <x-portfolio.section-heading
             title="Academic Foundation"

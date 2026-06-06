@@ -1,6 +1,6 @@
 @php($categories = config('portfolio.skills'))
 
-<section id="skills" class="relative py-32 portfolio-section">
+<section id="skills" class="relative py-28 portfolio-section">
     <div class="mx-auto max-w-7xl px-6">
         <x-portfolio.section-heading title="Tech Stack Dashboard" />
 

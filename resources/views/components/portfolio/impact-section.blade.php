@@ -1,23 +1,19 @@
 @php
     $impact = config('portfolio.impact');
-    $statIcons = ['rocket', 'code', 'star', 'award'];
 @endphp
 
-<section id="impact" class="relative py-32 portfolio-section">
+<section id="impact" class="relative py-28 portfolio-section">
     <div class="mx-auto max-w-7xl px-6">
         <x-portfolio.section-heading title="Impact & Results" />
 
-        <div class="mb-16 grid gap-6 md:grid-cols-4">
+        <div class="mb-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4">
             @foreach ($impact['stats'] as $stat)
                 <div
-                    class="group animate-on-scroll glass-panel p-6 text-center hover:-translate-y-2"
+                    class="animate-on-scroll glass-panel p-6 text-center"
                     data-animate="scaleIn"
                     data-delay="{{ $loop->index * 0.1 }}"
                 >
-                    <div class="icon-box mb-4 inline-flex p-4 transition-transform group-hover:scale-105">
-                        <x-portfolio.icon :name="$statIcons[$loop->index]" class="h-8 w-8 text-zinc-600" />
-                    </div>
-                    <div class="mb-2 text-4xl font-bold text-zinc-900">{{ $stat['value'] }}</div>
+                    <div class="mb-1 text-3xl font-bold text-zinc-900 md:text-4xl">{{ $stat['value'] }}</div>
                     <div class="text-sm text-zinc-500">{{ $stat['label'] }}</div>
                 </div>
             @endforeach

@@ -30,11 +30,19 @@
 }
 
 @utility glass-panel {
+  @apply rounded-2xl border border-portfolio-border bg-portfolio-bg-soft shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+}
+
+@utility surface-card {
   @apply rounded-2xl border border-portfolio-border bg-portfolio-bg shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
 }
 
 @utility inner-panel {
   @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft;
+}
+
+@utility inner-panel-inverted {
+  @apply rounded-xl border border-portfolio-border bg-portfolio-bg;
 }
 
 @utility section-divider {
@@ -73,8 +81,40 @@
   background-image: linear-gradient(180deg, #ffffff 0%, #f4f4f3 100%);
 }
 
+@utility portfolio-section {
+  background-color: #ffffff;
+}
+
 @utility portfolio-section-alt {
   background-color: #f4f4f3;
+}
+
+@utility timeline-line {
+  @apply absolute top-0 bottom-0 left-4 w-px bg-linear-to-b from-portfolio-border via-zinc-400 to-portfolio-border md:left-1/2;
+}
+
+@utility timeline-card {
+  @apply overflow-hidden rounded-2xl border border-portfolio-border bg-portfolio-bg shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+}
+
+@utility timeline-card-current {
+  @apply border-zinc-900/25 shadow-md ring-1 ring-zinc-900/10;
+}
+
+@utility timeline-marker {
+  @apply absolute left-4 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-xl border border-portfolio-border bg-portfolio-bg p-0 shadow-sm md:left-1/2;
+}
+
+@utility timeline-body {
+  @apply border-t border-portfolio-border/80 bg-portfolio-bg px-6 py-5 md:px-7 md:py-6;
+}
+
+@utility timeline-achievement {
+  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft p-4 md:p-5;
+}
+
+@utility timeline-header {
+  @apply px-6 py-5 md:px-7;
 }
 
 @utility portfolio-nav-at-top {
@@ -110,6 +150,30 @@
 
 .animate-aurora {
   animation: auroraShift 8s ease-in-out infinite;
+}
+
+.identity-flip-card {
+  perspective: 1200px;
+}
+
+.identity-flip-inner {
+  transform-style: preserve-3d;
+  transition: transform 0.7s ease-in-out;
+  transform: rotateY(0deg);
+}
+
+.identity-flip-card:hover .identity-flip-inner,
+.identity-flip-card:focus-within .identity-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.identity-flip-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.identity-flip-back {
+  transform: rotateY(180deg);
 }
 
 /* Scroll & load animations */
