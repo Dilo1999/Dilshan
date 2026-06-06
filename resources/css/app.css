@@ -77,8 +77,12 @@
   background-color: #f4f4f3;
 }
 
-@utility portfolio-section {
-  background-color: #ffffff;
+@utility portfolio-nav-at-top {
+  @apply border-transparent bg-transparent shadow-none backdrop-blur-none;
+}
+
+@utility portfolio-nav-scrolled {
+  @apply border-portfolio-border bg-portfolio-bg/95 shadow-sm backdrop-blur-xl;
 }
 
 @keyframes floatOrb {

@@ -7,6 +7,11 @@ return [
     'tagline' => 'Detail-oriented and enthusiastic developer focused on building clean, reliable solutions with modern web technologies like Next.js, Laravel, WordPress, and React Native.',
     'status' => 'Full Stack Developer',
     'hero_badge' => 'Full Stack Developer',
+    'hero_images' => [
+        'images/hero/0x0.webp',
+        'images/hero/Luxury-Honeymoon-Maldives-1024x575.webp',
+        'images/hero/Maldives-Honeymoon-Couple.jpg',
+    ],
     'roles' => [
         'Full Stack Developer',
         'Next.js',
