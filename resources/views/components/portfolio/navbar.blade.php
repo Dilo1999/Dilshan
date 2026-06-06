@@ -5,7 +5,7 @@
 
     <div class="relative mx-auto max-w-7xl px-6">
         <div class="flex h-16 items-center justify-between">
-            <a href="#home" class="group flex items-center gap-3" data-nav-link>
+            <a href="{{ route('home') }}#home" class="group flex items-center gap-3" data-nav-link>
                 <div class="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-linear-to-br from-blue-500 to-purple-600 shadow-lg shadow-blue-500/20 transition-transform group-hover:scale-105">
                     <span class="font-semibold">{{ config('portfolio.initials') }}</span>
                 </div>
@@ -14,7 +14,7 @@
             <div class="hidden items-center gap-8 md:flex">
                 @foreach ($navItems as $item)
                     <a
-                        href="#{{ strtolower($item) }}"
+                        href="{{ route('home') }}#{{ strtolower($item) }}"
                         class="group relative text-gray-300 transition-colors hover:text-white"
                         data-nav-link
                     >
@@ -44,7 +44,7 @@
         >
             @foreach ($navItems as $item)
                 <a
-                    href="#{{ strtolower($item) }}"
+                    href="{{ route('home') }}#{{ strtolower($item) }}"
                     class="block rounded-lg px-4 py-2 text-gray-300 transition-colors hover:bg-white/5 hover:text-white"
                     data-nav-link
                     data-mobile-menu-close

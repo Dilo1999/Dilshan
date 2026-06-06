@@ -1,4 +1,4 @@
-@php($projects = config('portfolio.projects'))
+@php($projects = \App\Support\PortfolioProjects::all())
 
 <section id="projects" class="relative py-32">
     <div class="mx-auto max-w-7xl px-6">
@@ -47,10 +47,13 @@
                             </div>
                         </div>
 
-                        <button type="button" class="group/btn flex w-full items-center justify-center gap-2 rounded-xl border border-blue-500/30 bg-linear-to-r from-blue-600/20 to-purple-600/20 px-4 py-3 transition-all duration-300 hover:border-blue-500/50">
+                        <a
+                            href="{{ route('projects.show', $project['slug']) }}"
+                            class="group/btn flex w-full items-center justify-center gap-2 rounded-xl border border-blue-500/30 bg-linear-to-r from-blue-600/20 to-purple-600/20 px-4 py-3 transition-all duration-300 hover:border-blue-500/50"
+                        >
                             <span>View Case Study</span>
                             <x-portfolio.icon name="arrow-right" class="h-4 w-4 transition-transform group-hover/btn:translate-x-1" />
-                        </button>
+                        </a>
                     </div>
                 </article>
             @endforeach

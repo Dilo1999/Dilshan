@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProjectController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
@@ -29,3 +30,4 @@ Route::match(['get', 'head'], 'storage/{path}', function () {
 })->where('path', '.*')->name('storage.serve');
 
 Route::get('/', fn () => view('home'))->name('home');
+Route::get('/projects/{slug}', [ProjectController::class, 'show'])->name('projects.show');
