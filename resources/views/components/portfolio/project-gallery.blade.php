@@ -16,16 +16,11 @@
                                 <div class="flex aspect-video items-center justify-center bg-portfolio-bg-soft p-4 md:p-8">
                                     <img
                                         src="{{ $image['src'] }}"
-                                        alt="{{ $image['alt'] }}"
+                                        alt=""
                                         class="max-h-[420px] w-full rounded-lg border border-portfolio-border object-contain shadow-sm"
                                         loading="lazy"
                                     >
                                 </div>
-                                @if (! empty($image['caption']))
-                                    <figcaption class="border-t border-portfolio-border px-4 py-3 text-center text-sm text-zinc-600">
-                                        {{ $image['caption'] }}
-                                    </figcaption>
-                                @endif
                             </figure>
                         @endforeach
                     </div>
