@@ -42,7 +42,9 @@
                     </div>
                 </div>
             </div>
+        </div>
 
+        <div class="relative z-10 mx-auto mt-8 max-w-7xl px-4 md:px-6">
             <x-portfolio.project-gallery :project="$project" />
         </div>
     </section>
