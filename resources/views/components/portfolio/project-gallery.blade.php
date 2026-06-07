@@ -15,7 +15,7 @@
                     <div class="flex items-center gap-2 md:gap-3">
                         <button
                             type="button"
-                            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-portfolio-border bg-portfolio-bg text-zinc-700 shadow-sm transition-colors hover:border-zinc-300 hover:text-zinc-900 md:h-11 md:w-11"
+                            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/50 hover:text-white md:h-11 md:w-11"
                             data-slider-prev
                             aria-label="Previous image"
                         >
@@ -39,7 +39,7 @@
 
                         <button
                             type="button"
-                            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-portfolio-border bg-portfolio-bg text-zinc-700 shadow-sm transition-colors hover:border-zinc-300 hover:text-zinc-900 md:h-11 md:w-11"
+                            class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/5 text-gray-300 shadow-sm backdrop-blur-sm transition-colors hover:border-blue-500/50 hover:text-white md:h-11 md:w-11"
                             data-slider-next
                             aria-label="Next image"
                         >
@@ -51,7 +51,7 @@
                         @foreach ($project['images'] as $image)
                             <button
                                 type="button"
-                                class="h-2 w-2 rounded-full bg-zinc-300 transition-colors"
+                                class="h-2 w-2 rounded-full bg-white/30 transition-colors"
                                 data-slider-dot
                                 aria-label="Go to image {{ $loop->iteration }}"
                                 aria-selected="false"

@@ -19,8 +19,8 @@ export function initProjectSliders() {
             track.style.transform = `translateX(-${index * 100}%)`;
 
             dots.forEach((dot, dotIndex) => {
-                dot.classList.toggle('bg-zinc-700', dotIndex === index);
-                dot.classList.toggle('bg-zinc-300', dotIndex !== index);
+                dot.classList.toggle('bg-blue-400', dotIndex === index);
+                dot.classList.toggle('bg-white/30', dotIndex !== index);
                 dot.setAttribute('aria-selected', dotIndex === index ? 'true' : 'false');
             });
 

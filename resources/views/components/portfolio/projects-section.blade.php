@@ -17,25 +17,25 @@
                     <div class="space-y-6">
                         <div class="flex items-start justify-between">
                             <div class="icon-box p-4 transition-transform group-hover:scale-105">
-                                <x-portfolio.icon :name="$project['icon']" class="h-8 w-8 text-zinc-600" />
+                                <x-portfolio.icon :name="$project['icon']" class="h-8 w-8 text-blue-400" />
                             </div>
                             <span class="tag-pill text-xs">{{ $project['category'] }}</span>
                         </div>
 
                         <div>
-                            <h3 class="mb-3 text-xl font-bold text-zinc-900 md:text-2xl">
+                            <h3 class="mb-3 text-xl font-bold text-white md:text-2xl">
                                 {{ $project['title'] }}
                             </h3>
-                            <p class="mb-4 leading-relaxed text-zinc-600">{{ $project['description'] }}</p>
+                            <p class="mb-4 leading-relaxed text-gray-300">{{ $project['description'] }}</p>
 
                             <div class="inner-panel mb-4 p-4">
-                                <div class="mb-1 text-sm text-zinc-500">Role</div>
-                                <div class="text-sm text-zinc-700">{{ $project['problem'] }}</div>
+                                <div class="mb-1 text-sm text-gray-400">Role</div>
+                                <div class="text-sm text-gray-300">{{ $project['problem'] }}</div>
                             </div>
                         </div>
 
                         <div>
-                            <div class="mb-3 text-sm text-zinc-500">Tech Stack</div>
+                            <div class="mb-3 text-sm text-gray-400">Tech Stack</div>
                             <div class="flex flex-wrap gap-2">
                                 @foreach ($project['tech'] as $tech)
                                     <span class="tech-tag">{{ $tech }}</span>

@@ -7,14 +7,18 @@
     <title>{{ $title ?? config('portfolio.name') . ' | Software Engineer' }}</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="min-h-screen bg-portfolio-bg font-sans text-zinc-600 antialiased selection:bg-zinc-200 selection:text-zinc-900">
-    <x-portfolio.navbar />
+<body class="min-h-screen overflow-x-hidden bg-portfolio-bg font-sans text-gray-300 antialiased selection:bg-blue-500/30 selection:text-white">
+    <div class="pointer-events-none fixed inset-0 bg-[radial-gradient(ellipse_at_top,var(--tw-gradient-stops))] from-blue-900/20 via-portfolio-bg to-portfolio-bg" aria-hidden="true"></div>
 
-    <main>
-        {{ $slot }}
-    </main>
+    <div class="relative z-10">
+        <x-portfolio.navbar />
+
+        <main>
+            {{ $slot }}
+        </main>
+    </div>
 </body>
 </html>

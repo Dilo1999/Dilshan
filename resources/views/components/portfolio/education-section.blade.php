@@ -14,41 +14,41 @@
                         <div class="grid items-start gap-6 md:grid-cols-12">
                             <div class="md:col-span-3">
                                 <div class="icon-box mb-4 inline-flex p-4 transition-transform group-hover:scale-105">
-                                    <x-portfolio.icon :name="$edu['icon']" class="h-8 w-8 text-zinc-600" />
+                                    <x-portfolio.icon :name="$edu['icon']" class="h-8 w-8 text-gray-300" />
                                 </div>
 
                                 <div class="space-y-2">
                                     <div class="flex items-center gap-2">
-                                        <x-portfolio.icon name="badge" class="h-4 w-4 text-zinc-500" />
-                                        <span class="text-sm text-zinc-600">Verified</span>
+                                        <x-portfolio.icon name="badge" class="h-4 w-4 text-gray-400" />
+                                        <span class="text-sm text-gray-300">Verified</span>
                                     </div>
-                                    <div class="text-sm text-zinc-500">{{ $edu['duration'] }}</div>
+                                    <div class="text-sm text-gray-400">{{ $edu['duration'] }}</div>
                                 </div>
                             </div>
 
                             <div class="space-y-6 md:col-span-9">
                                 <div>
-                                    <h3 class="mb-2 text-2xl font-bold text-zinc-900">
+                                    <h3 class="mb-2 text-2xl font-bold text-white">
                                         {{ $edu['degree'] }}
                                     </h3>
-                                    <div class="mb-4 flex items-center gap-2 text-zinc-600">
+                                    <div class="mb-4 flex items-center gap-2 text-gray-300">
                                         <x-portfolio.icon name="book" class="h-4 w-4" />
                                         <span>{{ $edu['institution'] }}</span>
                                     </div>
 
                                     <div class="inner-panel mb-4 p-4">
                                         <div class="flex items-start gap-2">
-                                            <x-portfolio.icon name="sparkles" class="mt-1 h-4 w-4 shrink-0 text-zinc-500" />
+                                            <x-portfolio.icon name="sparkles" class="mt-1 h-4 w-4 shrink-0 text-gray-400" />
                                             <div>
-                                                <div class="mb-1 text-sm text-zinc-500">Key Achievement</div>
-                                                <p class="text-sm text-zinc-600">{{ $edu['achievement'] }}</p>
+                                                <div class="mb-1 text-sm text-gray-400">Key Achievement</div>
+                                                <p class="text-sm text-gray-300">{{ $edu['achievement'] }}</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <div class="mb-3 text-sm text-zinc-500">Focus Areas</div>
+                                    <div class="mb-3 text-sm text-gray-400">Focus Areas</div>
                                     <div class="flex flex-wrap gap-2">
                                         @foreach ($edu['focus_areas'] as $area)
                                             <span class="tag-pill transition-all hover:scale-105">{{ $area }}</span>
@@ -69,9 +69,9 @@
         <div class="mt-12 grid gap-6 md:grid-cols-3">
             @foreach (config('portfolio.education_stats') as $stat)
                 <div class="group glass-panel p-6 text-center">
-                    <x-portfolio.icon :name="$stat['icon']" class="mx-auto mb-3 h-6 w-6 text-zinc-500 transition-transform group-hover:scale-110" />
-                    <div class="mb-1 text-3xl font-bold text-zinc-900">{{ $stat['value'] }}</div>
-                    <div class="text-sm text-zinc-500">{{ $stat['label'] }}</div>
+                    <x-portfolio.icon :name="$stat['icon']" class="mx-auto mb-3 h-6 w-6 text-gray-400 transition-transform group-hover:scale-110" />
+                    <div class="mb-1 stat-value">{{ $stat['value'] }}</div>
+                    <div class="text-sm text-gray-400">{{ $stat['label'] }}</div>
                 </div>
             @endforeach
         </div>

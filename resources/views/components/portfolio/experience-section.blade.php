@@ -21,7 +21,7 @@
                             data-delay="{{ $loop->index * 0.15 }}"
                         >
                             <div class="timeline-marker hidden md:flex">
-                                <x-portfolio.icon :name="$exp['icon']" class="h-5 w-5 text-zinc-700" />
+                                <x-portfolio.icon :name="$exp['icon']" class="h-5 w-5 text-gray-300" />
                             </div>
 
                             <div class="flex-1 pl-10 md:pl-0 {{ $isEven ? 'md:text-right' : 'md:text-left' }}">
@@ -29,24 +29,24 @@
                                     <div class="timeline-header">
                                         <div class="mb-4 flex items-center gap-3 md:hidden">
                                             <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-portfolio-border bg-portfolio-bg">
-                                                <x-portfolio.icon :name="$exp['icon']" class="h-5 w-5 text-zinc-700" />
+                                                <x-portfolio.icon :name="$exp['icon']" class="h-5 w-5 text-gray-300" />
                                             </div>
                                         </div>
 
                                         @if ($isCurrent)
-                                            <span class="inline-block rounded-full bg-zinc-900 px-3 py-1 text-xs font-semibold tracking-wide text-white">
+                                            <span class="badge-current">
                                                 {{ $exp['period'] }}
                                             </span>
                                         @else
-                                            <span class="text-xs font-semibold uppercase tracking-[0.16em] text-zinc-400">
+                                            <span class="text-xs font-semibold uppercase tracking-[0.16em] text-gray-500">
                                                 {{ $exp['period'] }}
                                             </span>
                                         @endif
 
-                                        <h3 class="mt-2.5 text-xl font-bold leading-snug text-zinc-900 md:text-2xl">
+                                        <h3 class="mt-2.5 text-xl font-bold leading-snug text-white md:text-2xl">
                                             {{ $exp['role'] }}
                                         </h3>
-                                        <p class="mt-1.5 text-sm font-medium text-zinc-500 md:text-base">
+                                        <p class="mt-1.5 text-sm font-medium text-gray-400 md:text-base">
                                             {{ $exp['company'] }}
                                         </p>
                                     </div>
@@ -56,14 +56,14 @@
                                             @foreach ($exp['achievements'] as $achievement)
                                                 <li class="timeline-achievement text-left">
                                                     @if (str_contains($achievement, ':'))
-                                                        <h4 class="text-sm font-semibold leading-snug text-zinc-900 md:text-base">
+                                                        <h4 class="text-sm font-semibold leading-snug text-white md:text-base">
                                                             {{ trim(Str::before($achievement, ':')) }}
                                                         </h4>
-                                                        <p class="mt-2 text-sm leading-relaxed text-zinc-600">
+                                                        <p class="mt-2 text-sm leading-relaxed text-gray-300">
                                                             {{ trim(Str::after($achievement, ':')) }}
                                                         </p>
                                                     @else
-                                                        <p class="text-sm leading-relaxed text-zinc-600">
+                                                        <p class="text-sm leading-relaxed text-gray-300">
                                                             {{ $achievement }}
                                                         </p>
                                                     @endif

@@ -15,14 +15,14 @@
 
                 <div class="grid grid-cols-2 gap-4">
                     <div class="glass-panel group p-6">
-                        <x-portfolio.icon name="calendar" class="mb-3 h-5 w-5 text-zinc-500 transition-transform group-hover:scale-110" />
-                        <div class="mb-1 text-sm text-zinc-500">Experience</div>
-                        <div class="font-semibold text-zinc-900">{{ $about['experience'] }}</div>
+                        <x-portfolio.icon name="calendar" class="mb-3 h-5 w-5 text-purple-400 transition-transform group-hover:scale-110" />
+                        <div class="mb-1 text-sm text-gray-400">Experience</div>
+                        <div class="font-semibold text-white">{{ $about['experience'] }}</div>
                     </div>
                     <div class="glass-panel group p-6">
-                        <x-portfolio.icon name="map-pin" class="mb-3 h-5 w-5 text-zinc-500 transition-transform group-hover:scale-110" />
-                        <div class="mb-1 text-sm text-zinc-500">Location</div>
-                        <div class="font-semibold text-zinc-900">{{ $about['location'] }}</div>
+                        <x-portfolio.icon name="map-pin" class="mb-3 h-5 w-5 text-blue-400 transition-transform group-hover:scale-110" />
+                        <div class="mb-1 text-sm text-gray-400">Location</div>
+                        <div class="font-semibold text-white">{{ $about['location'] }}</div>
                     </div>
                 </div>
             </div>
@@ -30,22 +30,22 @@
             <div class="space-y-4">
                 <div class="glass-panel p-8">
                     <div class="mb-6 flex items-center gap-3">
-                        <x-portfolio.icon name="zap" class="h-6 w-6 text-zinc-600" />
-                        <h3 class="text-xl font-semibold text-zinc-900">Focus Areas</h3>
+                        <x-portfolio.icon name="zap" class="h-6 w-6 text-cyan-400" />
+                        <h3 class="text-xl font-semibold text-white">Focus Areas</h3>
                     </div>
                     <div class="space-y-3">
                         @foreach ($about['focus_areas'] as $focus)
-                            <div class="inner-panel flex items-start gap-3 p-3 transition-colors hover:border-zinc-300">
-                                <div class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-400"></div>
-                                <span class="text-zinc-600">{{ $focus }}</span>
+                            <div class="inner-panel flex items-start gap-3 p-3 transition-colors hover:border-blue-500/50">
+                                <div class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-cyan-400"></div>
+                                <span class="text-gray-300">{{ $focus }}</span>
                             </div>
                         @endforeach
                     </div>
                 </div>
 
                 <div class="glass-panel p-6">
-                    <div class="mb-2 text-sm text-zinc-500">Current Interest</div>
-                    <div class="text-lg font-semibold text-zinc-900">
+                    <div class="mb-2 text-sm text-gray-400">Current Interest</div>
+                    <div class="text-lg font-semibold text-white">
                         {{ $about['current_interest'] }}
                     </div>
                 </div>

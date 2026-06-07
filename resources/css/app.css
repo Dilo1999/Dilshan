@@ -5,112 +5,118 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-/* ── Clean light theme (#ffffff + #f4f4f3) ── */
+/* ── Dark digital-architect theme (from reference src) ── */
 @theme {
-  --color-portfolio-bg: #ffffff;
-  --color-portfolio-bg-soft: #f4f4f3;
-  --color-portfolio-elevated: #ffffff;
-  --color-portfolio-border: #e8e8e6;
-  --color-portfolio-muted: #71717a;
-  --color-portfolio-text: #27272a;
+  --color-portfolio-bg: #0a0e1a;
+  --color-portfolio-bg-soft: rgba(255, 255, 255, 0.05);
+  --color-portfolio-elevated: rgba(15, 23, 42, 0.6);
+  --color-portfolio-border: rgba(255, 255, 255, 0.1);
+  --color-portfolio-muted: #94a3b8;
+  --color-portfolio-text: #d1d5db;
+  --color-portfolio-heading: #f0f4ff;
+  --color-primary: #60a5fa;
+  --color-secondary: #8b5cf6;
+  --color-accent: #06b6d4;
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", "Inter", ui-sans-serif, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
 
 @utility text-gradient-primary {
-  @apply text-zinc-900;
+  @apply bg-linear-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent;
 }
 
 @utility text-gradient-hero {
-  @apply text-zinc-900;
+  @apply bg-linear-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent;
 }
 
 @utility text-gradient-accent {
-  @apply text-zinc-800;
+  @apply bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
 }
 
 @utility glass-panel {
-  @apply rounded-2xl border border-portfolio-border bg-portfolio-bg-soft shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+  @apply rounded-2xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 backdrop-blur-xl transition-all duration-300 hover:border-blue-500/50;
 }
 
 @utility surface-card {
-  @apply rounded-2xl border border-portfolio-border bg-portfolio-bg shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+  @apply rounded-2xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 backdrop-blur-xl transition-all duration-300 hover:-translate-y-2 hover:border-white/20;
 }
 
 @utility inner-panel {
-  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft;
+  @apply rounded-xl border border-white/10 bg-white/5;
 }
 
 @utility inner-panel-inverted {
-  @apply rounded-xl border border-portfolio-border bg-portfolio-bg;
+  @apply rounded-xl border border-white/10 bg-white/[0.07];
 }
 
 @utility section-divider {
-  @apply mx-auto h-px w-24 rounded-full bg-portfolio-border;
+  @apply mx-auto h-1 w-24 rounded-full bg-linear-to-r from-blue-500 to-purple-600;
 }
 
 @utility btn-primary {
-  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-zinc-900 px-6 py-3.5 font-medium text-white transition-all duration-300 hover:bg-zinc-800;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3.5 font-medium text-white transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/50;
 }
 
 @utility btn-secondary {
-  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-portfolio-border bg-portfolio-bg px-6 py-3.5 font-medium text-zinc-700 transition-all duration-300 hover:bg-portfolio-bg-soft;
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 font-medium text-gray-300 transition-all duration-300 hover:border-white/30 hover:bg-white/10 hover:text-white;
 }
 
 @utility tag-pill {
-  @apply rounded-full border border-portfolio-border bg-portfolio-bg-soft px-4 py-2 text-sm text-zinc-600;
+  @apply rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-gray-300;
 }
 
 @utility tech-tag {
-  @apply rounded-lg border border-portfolio-border bg-portfolio-bg-soft px-3 py-1.5 text-sm text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-800;
+  @apply rounded-lg border border-white/10 bg-white/10 px-3 py-1.5 text-sm text-gray-300 transition-colors hover:border-blue-500/30 hover:text-white;
 }
 
 @utility icon-box {
-  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft p-3 text-zinc-700 shadow-sm;
+  @apply rounded-xl border border-white/10 bg-blue-500/10 p-3 text-blue-400;
 }
 
 @utility portfolio-grid-bg {
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(96, 165, 250, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(96, 165, 250, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
 }
 
 @utility portfolio-mesh {
-  background-color: #ffffff;
-  background-image: linear-gradient(180deg, #ffffff 0%, #f4f4f3 100%);
+  background-color: #0a0e1a;
+  background-image: linear-gradient(180deg, rgba(30, 58, 138, 0.2) 0%, rgba(88, 28, 135, 0.15) 40%, #0a0e1a 100%);
 }
 
 @utility portfolio-section {
-  background-color: #ffffff;
+  @apply relative;
+  background-color: #0a0e1a;
 }
 
 @utility portfolio-section-alt {
-  background-color: #f4f4f3;
+  @apply relative;
+  background: linear-gradient(180deg, #0a0e1a 0%, rgba(30, 58, 138, 0.08) 50%, #0a0e1a 100%);
 }
 
 @utility timeline-line {
-  @apply absolute top-0 bottom-0 left-4 w-px bg-linear-to-b from-portfolio-border via-zinc-400 to-portfolio-border md:left-1/2;
+  @apply absolute top-0 bottom-0 left-4 w-px bg-linear-to-b from-blue-500 via-purple-500 to-cyan-500 md:left-1/2;
 }
 
 @utility timeline-card {
-  @apply overflow-hidden rounded-2xl border border-portfolio-border bg-portfolio-bg shadow-sm transition-all duration-300 hover:border-zinc-300 hover:shadow-md;
+  @apply overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/50;
 }
 
 @utility timeline-card-current {
-  @apply border-zinc-900/25 shadow-md ring-1 ring-zinc-900/10;
+  @apply border-blue-500/40 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/20;
 }
 
 @utility timeline-marker {
-  @apply absolute left-4 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-xl border border-portfolio-border bg-portfolio-bg p-0 shadow-sm md:left-1/2;
+  @apply absolute left-4 z-10 flex h-12 w-12 -translate-x-1/2 items-center justify-center rounded-xl border border-white/10 bg-portfolio-bg p-0 shadow-lg shadow-blue-500/10 md:left-1/2;
 }
 
 @utility timeline-body {
-  @apply border-t border-portfolio-border/80 bg-portfolio-bg px-6 py-5 md:px-7 md:py-6;
+  @apply border-t border-white/10 bg-white/[0.02] px-6 py-5 md:px-7 md:py-6;
 }
 
 @utility timeline-achievement {
-  @apply rounded-xl border border-portfolio-border bg-portfolio-bg-soft p-4 md:p-5;
+  @apply rounded-xl border border-white/10 bg-white/5 p-4 md:p-5;
 }
 
 @utility timeline-header {
@@ -118,11 +124,23 @@
 }
 
 @utility portfolio-nav-at-top {
-  @apply border-transparent bg-transparent shadow-none backdrop-blur-none;
+  @apply border-white/10 bg-linear-to-b from-[#0a0e1a]/95 to-[#0a0e1a]/80 shadow-none backdrop-blur-xl;
 }
 
 @utility portfolio-nav-scrolled {
-  @apply border-portfolio-border bg-portfolio-bg/95 shadow-sm backdrop-blur-xl;
+  @apply border-white/10 bg-[#0a0e1a]/95 shadow-none backdrop-blur-xl;
+}
+
+@utility portfolio-logo {
+  @apply flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-linear-to-br from-blue-500 to-purple-600 font-semibold text-white shadow-lg shadow-blue-500/20 transition-transform duration-300 group-hover:scale-105;
+}
+
+@utility stat-value {
+  @apply bg-linear-to-r from-blue-400 to-purple-400 bg-clip-text text-3xl font-bold text-transparent md:text-4xl;
+}
+
+@utility badge-current {
+  @apply inline-block rounded-full bg-linear-to-r from-blue-600 to-purple-600 px-3 py-1 text-xs font-semibold tracking-wide text-white;
 }
 
 @keyframes floatOrb {
@@ -212,6 +230,10 @@ html {
 }
 
 @layer base {
+  body {
+    @apply bg-portfolio-bg text-gray-300 antialiased;
+  }
+
   h1, h2, h3 { font-family: var(--font-display); }
   h1 { @apply text-2xl font-semibold leading-[1.5]; }
   h2 { @apply text-xl font-semibold leading-[1.5]; }
@@ -278,7 +300,7 @@ html {
 }
 
 @utility bg-dots-darker {
-  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E");
 }
 
 @utility bg-dots-lighter {
