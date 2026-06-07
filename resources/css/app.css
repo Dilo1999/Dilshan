@@ -143,6 +143,30 @@
   @apply inline-block rounded-full bg-linear-to-r from-blue-600 to-purple-600 px-3 py-1 text-xs font-semibold tracking-wide text-white;
 }
 
+@utility project-detail-label {
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-blue-400;
+}
+
+@utility project-detail-card {
+  @apply rounded-2xl border border-white/10 bg-linear-to-br from-white/[0.07] to-white/[0.02] p-6 backdrop-blur-xl md:p-8;
+}
+
+@utility project-accent-challenge {
+  @apply border-l-2 border-blue-500/60 pl-5;
+}
+
+@utility project-accent-solution {
+  @apply border-l-2 border-purple-500/60 pl-5;
+}
+
+@utility project-feature-item {
+  @apply flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 transition-colors hover:border-cyan-500/30;
+}
+
+@utility project-gallery-frame {
+  @apply overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] shadow-[0_0_60px_-15px_rgba(96,165,250,0.25)];
+}
+
 @keyframes floatOrb {
   0%, 100% { transform: translateY(0) rotate(6deg); }
   50% { transform: translateY(-8px) rotate(6deg); }
