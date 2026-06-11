@@ -248,7 +248,10 @@ return [
             'period' => 'Current',
             'icon' => 'briefcase',
             'achievements' => [
-                'Building full-stack solutions and delivering production-ready software for Litus Group.',
+                'Travel Website  (Zaha Travels) : Zaha Travels is a luxury travel website for Maldives and Sri Lanka holidays - combining a beautiful public-facing experience with a powerful admin CMS, expert-led trip planning, and integrated reviews to convert browsers into booked travelers.',
+                'Corporate Group Website Development Litus Group (Laravel + Filament CMS) : Built a fully responsive Litus Group corporate website with Laravel, Tailwind CSS, and Alpine.js, plus a Filament admin panel to manage companies, blogs, careers, team, events, contact forms, and SEO content.',
+                'Election Campaign Website (thegreateraddu.com) : Built a responsive bilingual election campaign site for The Greater Addu with Laravel, Tailwind CSS, and a Filament CMS for hero sections, pledges, team profiles, blogs, contact info, and SEO.',
+                'Corporate B2B Website (alzahageneraltrading.com) : Built a fully responsive Al Zaha General Trading corporate B2B website with Laravel 10, Tailwind CSS 4, and Filament CMS, featuring 12+ service and content pages, dynamic blog publishing, admin-managed SEO (Open Graph, Twitter Cards, JSON-LD), contact and RFQ forms with file upload, Resend email delivery, and role-based admin access.',
             ],
         ],
     ],
