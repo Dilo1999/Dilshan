@@ -1,7 +1,7 @@
 @php($experiences = config('portfolio.experience'))
 
-<section id="experience" class="relative py-28 portfolio-section-alt">
-    <div class="relative z-10 mx-auto max-w-7xl px-6">
+<section id="experience" class="relative py-16 sm:py-20 lg:py-28 portfolio-section-alt">
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading
             title="Mission Timeline"
             :subtitle="config('portfolio.experience_subtitle')"

@@ -12,10 +12,10 @@
         : asset('images/profile/profile.svg');
 @endphp
 
-<div class="identity-flip-card group h-[28rem] w-full cursor-pointer sm:h-[30rem]" tabindex="0">
+<div class="identity-flip-card group h-[22rem] w-full cursor-pointer sm:h-[28rem] md:h-[30rem]" data-identity-flip-card tabindex="0" role="button" aria-pressed="false">
     <div class="identity-flip-inner relative h-full w-full">
         <div class="identity-flip-face identity-flip-front glass-panel absolute inset-0 flex flex-col items-center justify-center overflow-hidden p-10 text-center sm:p-12">
-            <div class="mb-6 h-44 w-44 overflow-hidden rounded-full border-4 border-white/20 shadow-lg shadow-blue-500/20 sm:h-48 sm:w-48">
+            <div class="mb-4 h-32 w-32 overflow-hidden rounded-full border-4 border-white/20 shadow-lg shadow-blue-500/20 sm:mb-6 sm:h-44 sm:w-44 md:h-48 md:w-48">
                 <img
                     src="{{ $imageSrc }}"
                     alt="{{ $profileImageAlt }}"
@@ -24,7 +24,10 @@
             </div>
             <h3 class="text-2xl font-semibold text-white sm:text-3xl">Developer Identity</h3>
             <p class="mt-2 text-sm text-gray-400 sm:text-base">{{ $name }}</p>
-            <p class="mt-4 text-xs text-gray-500 transition-colors group-hover:text-gray-400">Hover to read bio</p>
+            <p class="mt-4 text-xs text-gray-500 transition-colors group-hover:text-gray-400">
+                <span class="hidden sm:inline">Hover to read bio</span>
+                <span class="sm:hidden">Tap to read bio</span>
+            </p>
         </div>
 
         <div class="identity-flip-face identity-flip-back glass-panel absolute inset-0 overflow-hidden p-10 sm:p-12">

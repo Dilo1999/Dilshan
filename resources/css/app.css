@@ -204,8 +204,14 @@
   transform: rotateY(0deg);
 }
 
-.identity-flip-card:hover .identity-flip-inner,
-.identity-flip-card:focus-within .identity-flip-inner {
+@media (hover: hover) and (pointer: fine) {
+  .identity-flip-card:hover .identity-flip-inner,
+  .identity-flip-card:focus-within .identity-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.identity-flip-card.is-flipped .identity-flip-inner {
   transform: rotateY(180deg);
 }
 
@@ -216,6 +222,16 @@
 
 .identity-flip-back {
   transform: rotateY(180deg);
+}
+
+.portfolio-home {
+  @apply overflow-x-hidden;
+}
+
+@media (hover: none) {
+  .portfolio-home .surface-card:hover {
+    transform: translateY(0);
+  }
 }
 
 /* Scroll & load animations */

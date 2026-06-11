@@ -1,7 +1,7 @@
 @php($projects = \App\Support\PortfolioProjects::all())
 
-<section id="projects" class="relative py-28 portfolio-section-alt">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="projects" class="relative py-16 sm:py-20 lg:py-28 portfolio-section-alt">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading
             title="Featured Projects"
             :subtitle="config('portfolio.projects_subtitle')"
@@ -10,7 +10,7 @@
         <div class="grid gap-6 md:grid-cols-2">
             @foreach ($projects as $project)
                 <article
-                    class="group animate-on-scroll surface-card p-8"
+                    class="group animate-on-scroll surface-card p-5 sm:p-8"
                     data-animate="fadeInUp"
                     data-delay="{{ $loop->index * 0.1 }}"
                 >

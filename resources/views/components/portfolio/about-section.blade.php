@@ -1,7 +1,7 @@
 @php($about = config('portfolio.about'))
 
-<section id="about" class="relative py-28 portfolio-section">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="about" class="relative py-16 sm:py-20 lg:py-28 portfolio-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading title="Developer Profile" />
 
         <div class="grid items-center gap-8 md:grid-cols-2">
@@ -13,7 +13,7 @@
                     :name="config('portfolio.name')"
                 />
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-3 sm:gap-4">
                     <div class="glass-panel group p-6">
                         <x-portfolio.icon name="calendar" class="mb-3 h-5 w-5 text-purple-400 transition-transform group-hover:scale-110" />
                         <div class="mb-1 text-sm text-gray-400">Experience</div>

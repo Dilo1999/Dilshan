@@ -3,7 +3,7 @@
     $heroImages = $portfolio['hero_images'] ?? [];
 @endphp
 
-<section id="home" class="relative flex min-h-screen items-center justify-center overflow-hidden pt-16 pb-24">
+<section id="home" class="relative flex min-h-[100dvh] items-center justify-center overflow-hidden pt-16 pb-16 sm:pb-24">
     @if (count($heroImages) > 0)
         <div class="absolute inset-0" data-hero-slider aria-hidden="true">
             @foreach ($heroImages as $image)
@@ -29,19 +29,19 @@
         <div class="absolute inset-0 opacity-20 portfolio-grid-bg"></div>
     @endif
 
-    <div class="relative z-10 mx-auto max-w-7xl px-6">
-        <div class="space-y-8 text-center">
+    <div class="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="space-y-6 text-center sm:space-y-8">
             <div class="animate-now space-y-3" data-animate="fadeInUp">
-                <h1 class="text-4xl leading-tight font-bold text-gradient-hero sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 class="text-3xl leading-tight font-bold text-gradient-hero sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
                     {{ $portfolio['headline'][0] }}
                 </h1>
-                <h1 class="text-4xl leading-tight font-bold text-gradient-primary sm:text-5xl md:text-6xl lg:text-7xl">
+                <h1 class="text-3xl leading-tight font-bold text-gradient-primary sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
                     {{ $portfolio['headline'][1] }}
                 </h1>
             </div>
 
             <p
-                class="animate-now mx-auto max-w-3xl text-lg text-gray-300 md:text-xl"
+                class="animate-now mx-auto max-w-3xl text-base text-gray-300 sm:text-lg md:text-xl"
                 data-animate="fadeInUp"
                 data-delay="0.1"
             >
@@ -67,15 +67,15 @@
             </div>
 
             <div
-                class="animate-now flex flex-col items-center justify-center gap-4 pt-8 sm:flex-row"
+                class="animate-now flex w-full flex-col items-stretch justify-center gap-3 pt-6 sm:flex-row sm:items-center sm:gap-4 sm:pt-8"
                 data-animate="fadeInUp"
                 data-delay="0.4"
             >
-                <a href="#projects" class="btn-primary group px-8 py-4" data-nav-link>
+                <a href="#projects" class="btn-primary group w-full px-8 py-4 sm:w-auto" data-nav-link>
                     View Projects
                     <x-portfolio.icon name="arrow-right" class="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </a>
-                <a href="#contact" class="btn-secondary px-8 py-4" data-nav-link>
+                <a href="#contact" class="btn-secondary w-full px-8 py-4 sm:w-auto" data-nav-link>
                     <x-portfolio.icon name="mail" class="h-5 w-5" />
                     Contact Me
                 </a>

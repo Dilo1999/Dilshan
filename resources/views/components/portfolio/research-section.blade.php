@@ -1,7 +1,7 @@
 @php($research = config('portfolio.research'))
 
-<section id="research" class="relative py-28 portfolio-section-alt">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="research" class="relative py-16 sm:py-20 lg:py-28 portfolio-section-alt">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading title="Engineering Beyond the Interface" />
 
         <div class="grid gap-8 md:grid-cols-2">
@@ -17,7 +17,7 @@
                     {{ $research['summary'] }}
                 </p>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                     @foreach ($research['highlights'] as $item)
                         <div class="inner-panel p-4">
                             <x-portfolio.icon :name="$item['icon']" class="mb-2 h-5 w-5 text-gray-400" />

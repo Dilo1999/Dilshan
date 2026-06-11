@@ -35,18 +35,27 @@ function initNav() {
     link.addEventListener('click', () => setMenuOpen(false));
   });
 
+  function getHashTarget(href) {
+    if (!href) return null;
+
+    const hash = href.startsWith('#') ? href : new URL(href, window.location.origin).hash;
+    if (!hash) return null;
+
+    return document.querySelector(hash);
+  }
+
   document.querySelectorAll('[data-nav-link]').forEach((link) => {
     link.addEventListener('click', (e) => {
       const href = link.getAttribute('href');
-      if (!href?.startsWith('#')) return;
-
-      e.preventDefault();
-      const target = document.querySelector(href);
+      const target = getHashTarget(href);
       if (!target) return;
 
+      e.preventDefault();
       setMenuOpen(false);
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      history.replaceState(null, '', href);
+
+      const hash = href.startsWith('#') ? href : new URL(href, window.location.origin).hash;
+      history.replaceState(null, '', hash || href);
     });
   });
 }

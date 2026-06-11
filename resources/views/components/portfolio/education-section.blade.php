@@ -1,7 +1,7 @@
 @php($educations = config('portfolio.education'))
 
-<section id="education" class="relative py-28 portfolio-section">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="education" class="relative py-16 sm:py-20 lg:py-28 portfolio-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading
             title="Academic Foundation"
             :subtitle="config('portfolio.education_subtitle')"
@@ -58,7 +58,7 @@
                             </div>
                         </div>
 
-                        <div class="tag-pill absolute top-4 right-4 text-xs opacity-0 transition-opacity group-hover:opacity-100">
+                        <div class="tag-pill absolute top-4 right-4 hidden text-xs opacity-0 transition-opacity group-hover:opacity-100 sm:block">
                             Credential #{{ str_pad($loop->iteration, 3, '0', STR_PAD_LEFT) }}
                         </div>
                     </div>

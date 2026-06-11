@@ -2,8 +2,8 @@
     $impact = config('portfolio.impact');
 @endphp
 
-<section id="impact" class="relative py-28 portfolio-section">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="impact" class="relative py-16 sm:py-20 lg:py-28 portfolio-section">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading title="Impact & Results" />
 
         <div class="mb-12 grid gap-4 sm:grid-cols-2 md:grid-cols-4">

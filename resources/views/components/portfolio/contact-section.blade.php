@@ -17,12 +17,12 @@
     }
 @endphp
 
-<section id="contact" class="relative py-28 portfolio-section-alt">
-    <div class="mx-auto max-w-7xl px-6">
+<section id="contact" class="relative py-16 sm:py-20 lg:py-28 portfolio-section-alt">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <x-portfolio.section-heading :title="$contact['heading'] ?? 'Get in Touch'" />
 
         <div class="mx-auto max-w-4xl">
-            <div class="surface-card mb-8 p-8 md:p-10">
+            <div class="surface-card mb-8 p-5 sm:p-8 md:p-10">
                 <div class="mb-8">
                     <p class="mb-3 text-2xl font-semibold text-white md:text-3xl">
                         {{ $contact['intro'] }}
