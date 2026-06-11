@@ -103,6 +103,41 @@
   @apply overflow-hidden rounded-2xl border border-white/10 bg-linear-to-br from-white/5 to-white/2 backdrop-blur-xl transition-all duration-300 hover:border-purple-500/50;
 }
 
+@utility timeline-card-interactive {
+  @apply cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-purple-500/40;
+}
+
+@utility timeline-reveal {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@utility timeline-reveal-inner {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.timeline-card-interactive:hover .timeline-reveal,
+.timeline-card-interactive:focus-within .timeline-reveal {
+  grid-template-rows: 1fr;
+}
+
+.timeline-card-interactive .timeline-achievement {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+  transition-delay: calc(var(--achievement-index, 0) * 75ms + 120ms);
+}
+
+.timeline-card-interactive:hover .timeline-achievement,
+.timeline-card-interactive:focus-within .timeline-achievement {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @utility timeline-card-current {
   @apply border-blue-500/40 shadow-lg shadow-blue-500/20 ring-1 ring-blue-500/20;
 }

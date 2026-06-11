@@ -25,7 +25,10 @@
                             </div>
 
                             <div class="flex-1 pl-10 md:pl-0 {{ $isEven ? 'md:text-right' : 'md:text-left' }}">
-                                <article @class(['timeline-card', 'timeline-card-current' => $isCurrent])>
+                                <article
+                                    @class(['timeline-card timeline-card-interactive', 'timeline-card-current' => $isCurrent])
+                                    tabindex="0"
+                                >
                                     <div class="timeline-header">
                                         <div class="mb-4 flex items-center gap-3 md:hidden">
                                             <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-portfolio-border bg-portfolio-bg">
@@ -51,25 +54,32 @@
                                         </p>
                                     </div>
 
-                                    <div class="timeline-body">
-                                        <ul class="space-y-3">
-                                            @foreach ($exp['achievements'] as $achievement)
-                                                <li class="timeline-achievement text-left">
-                                                    @if (str_contains($achievement, ':'))
-                                                        <h4 class="text-sm font-semibold leading-snug text-white md:text-base">
-                                                            {{ trim(Str::before($achievement, ':')) }}
-                                                        </h4>
-                                                        <p class="mt-2 text-sm leading-relaxed text-gray-300">
-                                                            {{ trim(Str::after($achievement, ':')) }}
-                                                        </p>
-                                                    @else
-                                                        <p class="text-sm leading-relaxed text-gray-300">
-                                                            {{ $achievement }}
-                                                        </p>
-                                                    @endif
-                                                </li>
-                                            @endforeach
-                                        </ul>
+                                    <div class="timeline-reveal">
+                                        <div class="timeline-reveal-inner">
+                                            <div class="timeline-body">
+                                                <ul class="space-y-3">
+                                                    @foreach ($exp['achievements'] as $achievement)
+                                                        <li
+                                                            class="timeline-achievement text-left"
+                                                            style="--achievement-index: {{ $loop->index }}"
+                                                        >
+                                                            @if (str_contains($achievement, ':'))
+                                                                <h4 class="text-sm font-semibold leading-snug text-white md:text-base">
+                                                                    {{ trim(Str::before($achievement, ':')) }}
+                                                                </h4>
+                                                                <p class="mt-2 text-sm leading-relaxed text-gray-300">
+                                                                    {{ trim(Str::after($achievement, ':')) }}
+                                                                </p>
+                                                            @else
+                                                                <p class="text-sm leading-relaxed text-gray-300">
+                                                                    {{ $achievement }}
+                                                                </p>
+                                                            @endif
+                                                        </li>
+                                                    @endforeach
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </article>
                             </div>
