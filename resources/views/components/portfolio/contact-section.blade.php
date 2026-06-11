@@ -76,7 +76,7 @@
             </div>
 
             <p class="text-center text-sm text-gray-400">
-                © {{ date('Y') }} {{ config('portfolio.name') }}. Built with Laravel & Tailwind CSS.
+                © {{ date('Y') }} {{ config('portfolio.name') }}. All rights reserved.
             </p>
         </div>
     </div>
